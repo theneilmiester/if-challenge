@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ThreatModelPresenter from "components/ThreatModels/ThreatModelPresenter";
 import CountriesPresenter from "components/Countries/CountriesPresenter";
-import "styles.css";
+import "styles.scss";
 
 export default function App() {
   const threatModelPresenter = new ThreatModelPresenter();
