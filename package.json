@@ -1,10 +1,11 @@
 {
   "name": "if-frontend-challenge",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",

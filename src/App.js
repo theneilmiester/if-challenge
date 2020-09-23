@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ThreatModelPresenter from "components/ThreatModels/ThreatModelPresenter";
 import CountriesPresenter from "components/Countries/CountriesPresenter";
-import "styles.scss";
+import "styles/index.scss";
 
 export default function App() {
   const threatModelPresenter = new ThreatModelPresenter();
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <>
-      <div className="App">
+      <div className="App container-fluid">
         <h1>{localThreatModel.pageTitle}</h1>
       </div>
 

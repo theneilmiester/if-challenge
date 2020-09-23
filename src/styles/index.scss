@@ -1,0 +1,8 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import './colours.scss';
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: $bg-body;
+}

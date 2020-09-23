@@ -10,7 +10,7 @@
 1.0.2 - refactors src structure
 1.0.3 - adds directory aliasing with refactors
 1.0.4 - add sass support
+1.0.5 - add bootstrap support
 
 ## ToDos
-add bootstrap support
 add types folder and basic types
