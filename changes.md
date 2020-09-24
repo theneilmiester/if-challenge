@@ -14,6 +14,7 @@
 1.0.6 - adds mobx support
 1.0.7 - adds public/manifest.json 
 1.0.8 - adds mobx stores
+1.0.9 - refactors http-gateway service
 
 ## ToDos
 add eslint
