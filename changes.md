@@ -13,6 +13,7 @@
 1.0.5 - adds bootstrap support
 1.0.6 - adds mobx support
 1.0.7 - adds public/manifest.json 
+1.0.8 - adds mobx stores
 
 ## ToDos
 add eslint
