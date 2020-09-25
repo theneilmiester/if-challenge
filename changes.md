@@ -16,6 +16,7 @@
 1.0.8 - adds mobx stores
 1.0.9 - refactors http-gateway service
 1.0.10 - refactors countries
+1.0.11 - adds threat-model on-load
 
 ## ToDos
 add eslint

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import RootStore from 'stores/RootStore';
+import RootStore from 'stores/root.store';
 import App from "./App";
 export const StoreContext = React.createContext();
 

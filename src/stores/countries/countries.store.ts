@@ -1,6 +1,6 @@
 import { observable, action, runInAction } from 'mobx';
 import HttpGateway from 'services/http-gateway';
-import { GatewayCountry } from 'types';
+import { IRootStore, GatewayCountry } from 'types';
 
 export default class CountriesStore {
 
@@ -8,7 +8,7 @@ export default class CountriesStore {
         this.rootStore = rootStore;
     }
     
-    rootStore:any = {};
+    rootStore:IRootStore;
 
     @observable isPending:boolean = false;
     @observable isComplete:boolean = false;

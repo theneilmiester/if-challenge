@@ -1,8 +1,9 @@
 import {
-    ICountriesStore
+    ICountriesStore,
+    IThreatModelStore
 } from 'types';
 
 export interface IRootStore {
-    countriesStore: ICountriesStore;
-    threatStore: any;
+    countries: ICountriesStore;
+    threatModel: IThreatModelStore;
 }

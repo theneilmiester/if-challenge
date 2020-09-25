@@ -7,20 +7,32 @@ import "styles/index.scss";
 const App = () => {
 
   const stores:IRootStore = useContext(StoreContext);
-  const { countriesStore } = stores;
+  const { countries, threatModel } = stores;
 
   useEffect(() => {
 
-    if(countriesStore.errorText) {
-      console.log('error: ', countriesStore.errorText);
+    if(countries.errorText) {
+      console.log('error: ', countries.errorText);
     }
 
-    if(countriesStore.countries) {
-      console.log('countries: ', countriesStore.countries);
+    if(countries.countries) {
+      console.log('countries: ', countries.countries);
     }
 
-    if(! countriesStore.isComplete && ! countriesStore.isPending) {
-      countriesStore.getCountries();
+    if(! countries.isComplete && ! countries.isPending) {
+      countries.getCountries();
+    }
+
+    if(threatModel.errorText) {
+      console.log('error: ', threatModel.errorText);
+    }
+
+    if(threatModel.threatModel) {
+      console.log('threatModel: ', threatModel.threatModel);
+    }
+
+    if(! threatModel.isComplete && ! threatModel.isPending) {
+      threatModel.getThreatModel();
     }
 
   });
@@ -49,9 +61,9 @@ const App = () => {
 
       <div className="Countries">
         <h2>Country List</h2>
-        <p>Pending: { String(countriesStore.isPending) }</p>
+        <p>Pending: { String(countries.isPending) }</p>
         <ul>
-          {countriesStore.countries.map((country) => (
+          {countries.countries.map((country) => (
             <li key={country.code}>{country.name}</li>
           ))}
         </ul>
