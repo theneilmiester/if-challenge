@@ -1,6 +1,5 @@
-// import { observable, action } from 'mobx';
 import CountriesStore from './countries/CountriesStore';
-import ThreatStore from './threats/ThreatStore'; 
+import ThreatStore from './threats/ThreatStore';
 
 class RootStore {
 

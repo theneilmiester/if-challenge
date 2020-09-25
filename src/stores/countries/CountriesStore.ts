@@ -1,22 +1,44 @@
-import { observable, action } from 'mobx';
+import { observable, action, runInAction } from 'mobx';
+import HttpGateway from 'services/http-gateway';
+import { GatewayCountry } from 'types';
 
-export interface ICountriesStore {
-    likesCount: number;
-    updateCount: () => void;
-}
-
-export default class CountriesStore<ICountriesStore> {
-
-    rootStore:any = {};
+export default class CountriesStore {
 
     constructor(rootStore:any) {
         this.rootStore = rootStore;
     }
     
-    @observable likesCount = 12;
+    rootStore:any = {};
 
-    @action updateCount() {
-        this.likesCount++;
+    @observable isPending:boolean = false;
+    @observable isComplete:boolean = false;
+    @observable errorText:string = '';
+    
+    countries:GatewayCountry[] = observable([]);
+
+    @action
+    async getCountries() {
+        runInAction(() => {
+            this.isPending = true;
+            this.isComplete = false;
+            this.errorText = '';
+            this.countries = [];
+        });
+        try {
+            const response = await HttpGateway.getCountries();
+            runInAction(() => {
+                this.isPending = false;
+                this.isComplete = true;
+                this.countries = response.countries || [];
+            });
+        }
+        catch (caught) {
+            runInAction(() => {
+                this.isPending = false;
+                this.isComplete = true;
+                this.errorText = 'fetching countries failed';
+            });
+        }
     }
     
 }

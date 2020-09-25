@@ -1,10 +1,11 @@
 {
   "name": "if-frontend-challenge",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@types/react": "^16.9.49",
     "bootstrap": "^4.5.2",
     "mobx": "^5.15.7",
     "mobx-react": "^6.3.0",
